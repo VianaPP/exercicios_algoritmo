@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Complemento 3 </title>
+</head>
+<body>
+    <p>Qual a quantidade de m2 de grama você deseja?</p><input type="text" id="grama"><br><br>
+    <button onclick="calc()">Calcular</button><br><br><br>
+    <span id="result"></span>
+</body>
+</html>
+
+
+<script>
+function calc(){
+    var mg = Number(grama.value);   
+    var ge = mg * 9.70;
+    var gb = mg * 8.70;
+    var gsc = mg * 10.70;
+    var totalge = ge + 150;
+    var totalgb = gb + 200;
+    var totalgsc = gsc + 100; 
+    result.innerHTML = ` Para ${mg} m2 de grama, nosso orçamento é:<br>
+grama esmeralda = R$ ${ge},00,  frete = R$ 150,00,  valor total = R$ ${totalge},00 <br>
+grama batatais = R$ ${gb},00,  frete = R$ 200,00,  valor total = R$ ${totalgb},00 <br>
+grama São Carlos = R$ ${gsc},00  frete = R$ 100,00,  valor total = R$ ${totalgsc},00 <br>`
+}
+
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+<body>
+
+    <p>Qual o seu salário? </p><input type="text" id="sa1"><br><br>
+
+    <button id="Cadastrar" onclick="calc()"> Calcular Descontos</button><br><br>
+    <h3> Seus descontos serão de: </h3>
+    <span id="resp"></span>
+
+</body>
+</html>
+
+<script>
+
+function calc(){
+    var salario = Number(sa1.value);
+    var descinss = salario * 0.1;
+    var descir = salario * 0.2;
+    var totaldesc = descinss + descir;
+    var saltotal = salario - totaldesc;
+    resp.innerHTML = `INSS: <b>R$ ${descinss}</b><br>
+    IR: <b>R$ ${descir}</b><br>
+    Total de desconto: <b>R$ ${totaldesc}</b><br>
+    Seu salário, após os descontos será de: <u><b>R$ ${saltotal}</br></u> `
+
+}
+    
+</script>

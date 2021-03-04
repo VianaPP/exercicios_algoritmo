@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc2</title>
+</head>
+<body style="background-color: orange;">
+
+    <!-- Div com o fundo preto -->
+    <div id="gokuevegeta" style="margin-left: 40px; margin-top: 100px; margin-right: 40px; background-color: rgb(0, 0, 0); height: 500px;">
+        
+        <!-- Titulo da Div -->
+        <h1 style="margin-left: 500px; color: red;">Click em uma imagem!</h1>
+
+        <!-- Imagens do Goku e do vegeta -->
+        <img src="goku.jpg" alt="imagem do Goku" onclick="goku()" style="float: left; margin-left: 230px; margin-top: 100px; height: 200px;">
+        <img src="vegeta.jpg" alt="imagem do Vegeta" onclick="vegeta()" style="float: left; margin-left: 50px; margin-top: 100px; height: 200px;">
+    </div>
+
+</body>
+</html>
+
+    <!-- Inicio do Javascript -->
+    <script>
+
+       //criando a função
+        function goku(){
+            //chamando a caixa de alerta e colocando a mansagem a ser exibida 
+            alert ('Oi, eu sou o Goku!');
+        }
+
+        function vegeta(){
+            alert('Se você não sabe quem sou não passa de um verme maldito!');
+        }
+
+    </script>

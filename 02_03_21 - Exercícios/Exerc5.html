@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+
+    <p>Qual o valor da passagem? </p><input type="text" id="valor1">
+    <p>Quantas passagens você usa no mês? </p><input type="text" id="valor2">
+
+    <button id="Cadastrar" onclick="calc()"> CalcularVT</button><br><br>
+    <h3> Gasto</h3>
+    <span id="resp"></span>
+</body>
+</html>
+
+<script>
+
+function calc(){
+    var pa = Number(valor1.value);
+    var pm = Number(valor2.value);
+    var vt = pa*pm;
+    resp.innerHTML = `Você vai gastar <u>R$ ${vt}</u> por mês com ônibus`
+
+}
+    
+</script>

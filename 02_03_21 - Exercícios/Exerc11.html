@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+
+    <p>Qual o Ki base (força base) do guerreiro Sayajin? </p><input type="text" id="forca"><br><br>
+    <h3> Tranformado em... </h3>
+
+    <button id="ssj" onclick="calc1()"> SSJ </button>
+    <button id="ssj2" onclick="calc2()"> SSJ2 </button>
+    <button id="sssj3" onclick="calc3()"> SSJ3 </button><br><br>
+    
+    <span id="resp"></span>
+
+</body>
+</html>
+
+<script>
+
+function calc1(){
+    var nometrans = 'SSJ';
+    var transf = forca.value; 
+    var calc = transf * 50;
+    resp.innerHTML = ` Após se transformar em <u>${nometrans}</u>, o ki desse Sayajin passa a ser de <u>${calc}</u>`;
+}
+
+function calc2(){
+    var nometrans = 'SSJ2';
+    var transf = forca.value; 
+    var calc = transf * 100;
+    resp.innerHTML = ` Após se transformar em <u>${nometrans}</u>, o ki desse Sayajin passa a ser de <u>${calc}</u>`;
+}
+
+function calc3(){
+    var nometrans = 'SSJ3';
+    var transf = forca.value; 
+    var calc = transf *200;
+    resp.innerHTML = ` Após se transformar em <u>${nometrans}</u>, o ki desse Sayajin passa a ser de <u>${calc}</u>`;
+}
+    
+</script>

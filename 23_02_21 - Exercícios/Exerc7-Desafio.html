@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+
+    <!-- Titulo da página -->
+    <h2 style="margin-left: 350px;">Veja quantas taças do mundial de clubes da FIFA seu time tem:</h2>
+
+    <!-- div com os times-->
+    <div id="escudos" style="margin-left: 300px; margin-top: 100px;">
+
+        <!-- Tags img com os escudos dos times-->
+        <img id="san" src="santos.png" alt="escudo do time Santos" onclick="santos()" style="height: 200px;">
+        <img id="vas" src="vasco.png" alt="escudo do time Vasco" onclick="vasco()" style="height:  200px;">
+        <img id="saop" src="saopaulo.png" alt="escudo do time Boca juniors" onclick="sao()" style="height: 200px;">
+        <img id="palm" src="palmeiras.jpg" alt="escudo do time Santos" onclick="palmeiras()" style="height:  200px;"> 
+       
+        <!-- Tags dos botões da página-->
+        <button onclick="resetar()" id="reseta" style="margin-right: 10px;">Resetar programa</button>
+        <button onclick="esconder()" id="escondi" >Esconder escudos</button> 
+        <button onclick="mostrar()" id="mostra" style="margin-right: 10px; display: none; float: left;">Mostar escudos</button><br>
+        
+        <!-- Segundo Titulo da página -->
+        <h3>Quantidade de taças:</h3>
+    
+    <!-- Div onde aparecera as respostas -->
+    <div id="re">
+
+        <!-- titulo que ira aparecer-->
+        <h5 id="time"></h5>     
+
+        <!-- imagens das taças -->
+        <img style="height: 100px;" id="resposta">
+        <img style="height: 100px;" id="resposta2">
+        <img style="height: 100px;" id="resposta3">
+
+    </div>
+</body>
+</html>
+
+<!-- Tag do JS-->
+<script>
+
+    //criando as funções
+    function santos(){
+        //imagen da taça
+        resposta.src = "taca.png";
+        //imagen da taça  
+        resposta2.src = "taca.png";  
+        //alterando o corpo da tag do html
+        time.innerHTML = "Santos tem:"
+    }
+
+    function vasco(){
+        resposta.src = "mundial.png";  
+        resposta2.src = "";  
+        resposta3.src = "";  
+        time.innerHTML = "Vasco tem:"
+    }
+
+    function sao(){
+        resposta.src = "taca.png";  
+        resposta2.src = "taca.png";  
+        resposta3.src = "taca.png";  
+        time.innerHTML = "São Paulo tem:"
+    }
+
+    function palmeiras(){
+        resposta2.src = "";  
+        resposta3.src = "";  
+        resposta.src = "mundial.png";  
+        time.innerHTML = "Palmeiras tem:"
+    }
+
+    //função de esconder os escudos
+    function esconder(){
+        san.style.display = "none";
+        vas.style.display = "none";
+        saop.style.display = "none";
+        palm.style.display = "none";
+        mostra.style.display = "block";
+        escondi.style.display = "none";
+        reseta.style.display = "none";
+    }
+    
+    //função para mostrar os escudos
+    function mostrar(){
+        mostra.style.display = "none";
+        san.style.display = "";
+        vas.style.display = "";
+        saop.style.display = "";
+        palm.style.display = "";
+        escondi.style.display = "";
+        reseta.style.display = "";
+    }
+
+    //função para resetar o programa
+    function resetar(){
+        resposta.src = "";  
+        resposta2.src = "";  
+        resposta3.src = ""; 
+        time.innerHTML = "";
+    }
+
+</script>

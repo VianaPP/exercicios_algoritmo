@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complemento 1</title>
+</head>
+<body>
+
+<p>Qual a metragem  de canos a ser desentupida?</p><input id="metros" type="text">
+<br><br>
+<button onclick="calc()">Calcular</button><br>
+
+<div id="div_nicanor" style="background-color: rgba(0, 0, 0, 0.219); height: 300px; width: 300px; margin-top: 100px; margin-left: 180px; float: left;">
+    <h4 style="margin-left: 120px;">Nicanor</h4><br><br>
+    <span id="respn"></span>
+</div>
+
+<div id="div_rotirute" style="background-color: rgba(212, 41, 41, 0.363); height: 300px; width: 200px; margin-top: 100px; margin-left: 100px; float: left;">
+    <br><br>
+    <span id="dif"></span>
+</div>
+
+<div id="div_rotirute" style="background-color: rgba(0, 0, 0, 0.219); height: 300px; width: 300px; margin-top: 100px; margin-left: 100px; float: left;">
+    <h4 style="margin-left: 120px;">Rotirute</h4><br><br>
+    <span id="respr"></span>
+</div>
+
+</body>
+</html>
+
+<script>
+
+    function calc(){
+        var nica = 10;
+        var roti = 9.80;
+        var calcnica = Number(metros.value) * nica;
+        var calcroti = Number(metros.value) * roti;
+        var diferenca = calcroti - calcnica;
+        respn.innerHTML = `O serviço sai por: R$ ${calcnica + 50}`;
+        respr.innerHTML = `O serviço sai por: R$ ${calcroti + 600}`;
+        dif.innerHTML = `Diferença de: <br> R$ ${calcnica}<br> R$ ${calcroti} = <br> R$ ${diferenca} <br> no valor do serviço`;
+    
+}
+</script>

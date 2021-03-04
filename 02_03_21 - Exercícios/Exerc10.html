@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+
+    <p>Quantos filhos menores de 10 anos você tem? </p><input type="text" id="f_menor"><br><br>
+    <p>Quantos filhos maiores de 10 anos você tem? </p><input type="text" id="f_maior"><br><br>
+
+    <button id="Cadastrar" onclick="calc()"> Calcular Auxílio Filhos </button><br><br>
+    <h3> Seu Auxílio Filhos </h3>
+    <span id="resp"></span>
+
+</body>
+</html>
+
+<script>
+
+function calc(){
+    var filmaior = Number(f_maior.value) * 20;
+    var filmenor = Number(f_menor.value) * 30;
+    var auxtotal = filmaior + filmenor;
+    resp.innerHTML = `Você tem <b>${f_menor.value}</b> filhos menores de 10 anos e <b>${f_maior.value}</b> filhos a partir de 10 anos, logo, seu Auxílio Filhos será de <b><i>R$ ${auxtotal}</b></i>`;
+    
+
+}
+    
+</script>

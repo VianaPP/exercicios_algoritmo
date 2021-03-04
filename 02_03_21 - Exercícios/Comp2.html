@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Complemento 2 </title>
+</head>
+<body>
+    <p>Qual a quantidade de lâmpadas necessárias?</p><input type="text" id="lamp"><br><br>
+    <p>Qual o valor Médio da sua conta de luz?</p><input type="text" id="cont_luz"><br><br>
+
+    <button onclick="calc()"> Resultado</button><br><br><br>
+    <span id="result"></span>
+</body>
+</html>
+
+
+<script>
+function calc(){
+    var lp = Number(lamp.value);   
+    var inves = lp * 20;
+    var cluz = Number(cont_luz.value);
+    var econ = cluz * 0.1;
+    var concl = inves / econ;
+    result.innerHTML = `O seu investimento em lâmpadas será de R$ ${inves}<br>
+    A sua economia na conta de luz será de R$ ${econ}<br>
+    Portanto, em <b>${concl.toFixed(2)}</b> meses o seu investimento será retornado.`
+}
+
+</script>

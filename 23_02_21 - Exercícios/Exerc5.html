@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <!-- Titulo da Página-->
+    <h1>"Brasil x Alemanha"</h1><br>
+
+    <!-- Tags dos botões-->
+    <button onclick="golbr()"> Gol do Brasil</button>
+    <button onclick="alemanhagol()"> Gol do Alemanha</button>
+    <button id="btn_reseta" onclick="apagar()" style="display: none;"> Recomeçar o Jogo</button> <br><br>
+    
+    <b>Tempo real de jogo</b><br><br>
+
+    <!-- Span que ira a parecer o placar-->
+    <span id="frase1"></span>
+
+    
+</body>
+</html>
+
+<!-- tag do JS-->
+<script>
+
+    //criando as funções 
+    function golbr(){
+        //alterando o corpo do html
+        frase1.innerHTML += "<span style= 'color: green;' >É goooooll do Brasil!!!<br> </span>";
+        btn_reseta.style.display = "inline";
+        }
+
+    function alemanhagol(){
+        frase1.innerHTML += "<span style= 'color: yellow; background-color: red;'>É gooooll da Alemanha!!!<br> </span>";        
+        btn_reseta.style.display = "inline";
+       }
+
+    //função para apagar
+    function apagar(){
+        //alterando o corpo do html
+        frase1.innerHTML = "";
+        btn_reseta.style.display = "none";
+    }
+</script>

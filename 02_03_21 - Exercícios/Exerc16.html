@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 16 </title>
+</head>
+<body>
+    <h2>TABUADA</h2><br>
+    <p>Digite o Numero para ver a tabuada ?</p><input type="text" id="tabu"><br><br>
+
+    <button onclick="calc()"> Ver Tabuada</button><br><br><br>
+    <span id="result"></span>
+</body>
+</html>
+
+
+<script>
+function calc(){
+    var nu =  Number(tabu.value);
+    var tab1 = nu * 1;
+    var tab2 = nu * 2;
+    var tab3 = nu * 3;
+    var tab4 = nu * 4;
+    var tab5 = nu * 5;
+    var tab6 = nu * 6;
+    var tab7 = nu * 7;
+    var tab8 = nu * 8;
+    var tab9 = nu * 9;
+    var tab10 = nu * 10;
+    result.innerHTML = `
+    ${nu} x 1 = ${tab1}<br>
+    ${nu} x 2 = ${tab2}<br>
+    ${nu} x 3 = ${tab3}<br>
+    ${nu} x 4 = ${tab4}<br>
+    ${nu} x 5 = ${tab5}<br>
+    ${nu} x 6 = ${tab6}<br>
+    ${nu} x 7 = ${tab7}<br>
+    ${nu} x 8 = ${tab8}<br>
+    ${nu} x 9 = ${tab9}<br>
+    ${nu} x 10 = ${tab10}<br>
+    ` 
+}
+
+</script>

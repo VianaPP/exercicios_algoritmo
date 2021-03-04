@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <h1>Meus heróis favoritos são:</h1> <span id="span_heroi"></span> <br><br>
+    <h1>Meus vilões favoritos são:</h1> <span id="span_vilao" style="display: none;"> Freeza e Céu</span> <br><br>
+
+    <button onclick="verheroi()">Ver Heróis</button>
+    <button style="margin-left: 10px;" onclick="vervilao()">Ver Vilãos </button>
+    
+</body>
+</html>
+
+
+<script>
+
+    function verheroi(){
+        span_heroi.innerHTML = "<b> All might </b> e <i> Midoriya izuku</i>";
+    }
+
+    function vervilao(){
+        span_vilao.style.color = "red";
+        span_vilao.style.display = "block";
+    }
+
+
+
+</script>

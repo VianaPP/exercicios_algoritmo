@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 14 </title>
+</head>
+<body>
+    <h2>ELEIÇÕES 2021</h2><br>
+    <p>Quantos votos Yato teve ?</p><input type="text" id="yatu"><br>
+    <p>Quantos votos Yukine teve ?</p><input type="text" id="yuki"><br>
+    <p>Quantos votos Brancos teve ?</p><input type="text" id="brancos"><br>
+    <p>Quantos votos Nulos teve ?</p><input type="text" id="nulos"><br><br>
+
+    <button onclick="calc()"> Resultado da Eleição</button><br><br><br>
+    <span id="result"></span>
+</body>
+</html>
+
+
+<script>
+function calc(){
+    var yato =  Number(yatu.value) ;
+    var yukine = Number(yuki.value);
+    var branc = Number(brancos.value);
+    var nul = Number(nulos.value);
+    var totalv = yato + yukine + branc + nul;
+    var vyato =  (yato * 100) / totalv;
+    var vyuki =  (yukine * 100) / totalv;
+    var inval = branc + nul;
+    var vinval =  (inval * 100) / totalv;
+
+    result.innerHTML = `<b>Total de votos: <u>${totalv}</u></b><br>
+    <b>Yato:</b> ${vyato.toFixed(2)}% (${yatu.value} votos)<br>
+    <b>Yukine:</b> ${vyuki.toFixed(2)}% (${yuki.value} votos)<br>
+    <b>Inválidos:</b> ${vinval.toFixed(2)}% (${inval} votos)`; 
+}
+
+</script>

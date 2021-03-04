@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <button onclick="golremo()">Gol do Remo</button>
+    <button style="margin-left: 10px;" onclick="golpay()">Gol do Paysandu </button>
+    <button style="margin-left: 10px;" onclick="escan_remo()">Escanteio para o Remo </button>
+    <button style="margin-left: 10px;" onclick="escan_pay()">Escanteio para o Paysandu </button> <br>
+
+    <h3>Placar do jogo:</h3>
+
+    <div id="div_frase1"></div>
+
+</body>
+</html>
+
+
+<script>
+
+    function golremo(){
+        div_frase1.innerHTML += "<span style= 'color: navy;' >Goool do <b>Leão!</b> </span><br>";
+        
+    }
+
+    function golpay(){
+        div_frase1.innerHTML += "<span style= 'color: cyan;' >Goool da <u> Mucura! </u> </span><br>";
+      
+    }
+
+    function escan_remo(){
+        div_frase1.innerHTML += "Escanteio para o Leão! <br>";
+       
+    }
+
+    function escan_pay(){
+        div_frase1.innerHTML += "Escanteio para a Mucura! <br>";
+        
+    }
+
+
+
+</script>
